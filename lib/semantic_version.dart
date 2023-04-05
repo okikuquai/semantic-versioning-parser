@@ -1,9 +1,10 @@
 class SemanticVersion {
-  final int major;
-  final int minor;
-  final int patch;
+  //getterはとりあえずいいや
+  final int _major;
+  final int _minor;
+  final int _patch;
 
-  SemanticVersion(this.major, this.minor, this.patch);
+  SemanticVersion(this._major, this._minor, this._patch);
 
   static SemanticVersion? tryParse(String version) {
     final parts = version.split('.');
@@ -20,24 +21,24 @@ class SemanticVersion {
 
   @override
   String toString() {
-    return '$major.$minor.$patch';
+    return '$_major.$_minor.$_patch';
   }
 
   int compareTo(SemanticVersion other) {
-    if (major != other.major) {
-      return major.compareTo(other.major);
+    if (_major != other._major) {
+      return _major.compareTo(other._major);
     }
-    if (minor != other.minor) {
-      return minor.compareTo(other.minor);
+    if (_minor != other._minor) {
+      return _minor.compareTo(other._minor);
     }
-    return patch.compareTo(other.patch);
+    return _patch.compareTo(other._patch);
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     if (other is! SemanticVersion) return false;
-    return major == other.major && minor == other.minor && patch == other.patch;
+    return _major == other._major && _minor == other._minor && _patch == other._patch;
   }
 
   @override
