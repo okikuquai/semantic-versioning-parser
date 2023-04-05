@@ -1,4 +1,4 @@
-name: Semantic Versioning Parser
+name: semantic_versioning_parser
 description: This application parse semantic version.
 version: 1.0.0
 

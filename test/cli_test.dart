@@ -1,5 +1,5 @@
-import 'package:cli/main.dart';
 import 'package:parameterized_test/parameterized_test.dart';
+import 'package:semantic_versioning_parser/semantic_version.dart';
 import 'package:test/expect.dart';
 
 void main() {
@@ -9,7 +9,7 @@ void main() {
     SemanticVersion(3, 4, 5)
   ];
   parameterizedTest(
-    'Semantic Versioning Class test Success Case',
+    'Semantic Versioning class test. Success Case',
     ParameterizedSource.csv([
       '11.2.4, 1.2.4, 3.4.5',
     ]),
@@ -23,7 +23,7 @@ void main() {
   );
 
   parameterizedTest(
-    'Semantic Versioning Class test Fail Case',
+    'Semantic Versioning class test. Fail Case',
     ParameterizedSource.csv([
       'aaa, q.2.3, 3.rt.5, 1.4.a',
     ]),
